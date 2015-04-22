@@ -31,7 +31,11 @@ angular
         redirectTo: '/'
       });
   }).controller('MyMainCtrl',[function(){
-    var self = this;
+     var self = this;
     self.welcomeMsg="Welcome to Angular Application Using ControllerMsg!!";
     var notShowedMsg="This Message will not be shown";
+
+    self.changeMsg=function(){
+      self.welcomeMsg=" Now The Welcome Msg changed";
+    }
   }]);

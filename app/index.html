@@ -32,7 +32,10 @@
       Hello {{1+1}} time from your HTML page.
     </p>
 <p>
-  <div ng-bind="ctrl.welcomeMsg"></div>
+  <div >{{ctrl.welcomeMsg}}
+
+    <button ng-click="ctrl.changeMsg()"> Change Message</button>
+    </div>
 </p>
 
 
