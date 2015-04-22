@@ -30,4 +30,6 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }).controller('MyMainCtrl',[function(){
+    alert("hello World");
+  }]);
