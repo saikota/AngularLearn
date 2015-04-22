@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="angularLearnApp" ng-controller="MyMainCtrl as ctrl">
+  <body ng-app="angularLearnApp" class="ng-cloak" ng-controller="MyMainCtrl as ctrl">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -37,7 +37,18 @@
     <button ng-click="ctrl.changeMsg()"> Change Message</button>
     </div>
 </p>
+<p>
+  Notes
+  <div ng-repeat="note in ctrl.notes" ng-class="ctrl.getNoteClass(note.done)">
+      {{note.id}} - {{note.label}} <span>{{note.done}}</span> <span ng-show="note.asignee"> Assigned To : {{note.asignee}}</span>
+  </div>
 
+    <br/> Notes 2
+    <div ng-repeat="(author,note) in ctrl.notes" ng-class="ctrl.getNoteClass(note.done)">
+      {{note.id}} - {{note.label}} <span>{{note.done}}</span> <span ng-show="note.asignee"> Assigned To : {{note.asignee}}</span>
+    </div>
+
+</p>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
