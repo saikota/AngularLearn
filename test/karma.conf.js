@@ -31,7 +31,7 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
+     // 'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
 
@@ -51,7 +51,7 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      'PhantomJS'
+      'PhantomJS','Chrome'
     ],
 
     // Which plugins to enable
